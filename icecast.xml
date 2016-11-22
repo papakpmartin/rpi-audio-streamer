@@ -1,0 +1,58 @@
+<icecast>
+    <location>Trinity City Church</location>
+    <admin>av@trinitycitychurch.org</admin>
+
+    <hostname>stream</hostname>
+
+    <authentication>
+		<!-- Below used to send audio into icecast so it can be distributed -->
+        <source-password>sourcepassword</source-password>
+
+		<!-- Below used to access the admin web interface -->
+        <admin-user>admin</admin-user>
+        <admin-password>adminicecast</admin-password>
+
+		<!-- Below is unused, but would be used to relay audio into icecast so it can be distributed -->
+        <relay-password>relaypassword</relay-password>
+    </authentication>
+
+
+	<!-- BELOW HERE IS SOME DEFAULT STUFF THAT WORKED -->
+
+    <limits>
+        <clients>100</clients>
+        <sources>2</sources>
+        <threadpool>5</threadpool>
+        <queue-size>524288</queue-size>
+        <client-timeout>30</client-timeout>
+        <header-timeout>15</header-timeout>
+        <source-timeout>10</source-timeout>
+        <burst-on-connect>0</burst-on-connect>
+        <burst-size>65535</burst-size>
+    </limits>
+
+    <listen-socket>
+        <port>8000</port>
+    </listen-socket>
+
+    <fileserve>1</fileserve>
+
+    <paths>
+        <basedir>/usr/share/icecast2</basedir>
+        <logdir>/var/log/icecast2</logdir>
+        <webroot>/usr/share/icecast2/web</webroot>
+        <adminroot>/usr/share/icecast2/admin</adminroot>
+        <alias source="/" destination="/status.xsl"/>
+    </paths>
+
+    <logging>
+        <accesslog>access.log</accesslog>
+        <errorlog>error.log</errorlog>
+      	<loglevel>3</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
+      	<logsize>10000</logsize> <!-- Max size of a logfile -->
+    </logging>
+
+    <security>
+        <chroot>0</chroot>
+    </security>
+</icecast>
