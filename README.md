@@ -9,6 +9,8 @@ I'd like to be able to set up a Raspberry Pi (presuming Rev 3, but perhaps Zero 
 * Auto-start everything on power-up
 * Not have hideous things happen when the power is unceremoniously lost
 
+Overall intention is that this is "headless"... it's to be connected to a sound system, comes up when the system is powered up, and can handle it when power is shut down. Ideally no buttons or human interaction. Audio streaming lightbulb. :)
+
 I've gotten very close, and I don't think this repo represents my latest. I started to have some trouble with Docker and so kept slogging along just on the Raspi itself.
 
 ### Miscellaneous notes
