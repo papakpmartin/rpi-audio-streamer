@@ -16,3 +16,4 @@ I've gotten very close, and I don't think this repo represents my latest. I star
 * I'm using USB for the audio in, not the built-in jack
 * I'm using the Sinatra file just as kind of a "hello world" to see if streaming is working
 * I've had good luck streaming on LAN, but once I add the shoucast section to `darkice.cfg`, darkice seems to want to die
+* Conneting via Wi-Fi, not ethernet (because in my use case, being able to be wireless is much more important than the latency/performance hit)
