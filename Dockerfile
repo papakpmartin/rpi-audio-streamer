@@ -30,3 +30,5 @@ RUN update-rc.d -f mpd mpd \
 && update-rc.d mpd defaults \
 && update-rc.d -f darkice remove \
 && update-rc.d darkice defaults 99 \
+
+ENTRYPOINT "/usr/bin/darkice"
